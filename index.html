@@ -12,9 +12,9 @@
   </head> 
   <body>
     <!-- Navbar -->
-<nav class="navbar navbar-expand">
+<nav class="navbar navbar-expand bg-dark mb-5">
 		<div class="container">        
-          <div class="navbar-nav">
+          <div class="navbar-nav mx-auto ml-md-1">
             <a class="nav-item nav-link" href="#aboutMe">About Me</a>
             <a class="nav-item nav-link" href="#resume">Resume</a>
             <a class="nav-item nav-link" href="#skills">Skills and Interests</a>
@@ -23,16 +23,60 @@
         </div>      
     </nav>
     <!-- My Intro -->
+	<div class="col-6"><h2 class="mx-auto text-center">Welcome!</h2></div>
+	<div class="col-6"></div>
+	<div class="container myIntro d-flex bg-secondary mb-5">
+		<div class="row justify-content-center">
+			<div class="myImage col-md-2">
+			<p>Placeholder</p>
+			</div>
+			<div class="aboutMe col-md-6">
+			<p>My name is Dan Bahan, and welcome to my portfolio!<br>I am a web developer and
+			coder who loves to experiment and continuously expand my skills. I love web 
+			development because it is a perfect marriage between art and practicality, 
+			allowing me to explore my creativity while always providing more to learn and
+			experiment with. I would love an opportunity to make something for you too!</p>
+			</div>
+		</div>
+	</div>
 
     <!-- My Resume -->
-
+<div class="container resume mb-5">
+	<div class="row">
+		<div class="col-4"></div>
+		<div class="col-4 bg-dark text-center">
+			<a href="#resume">Download my Resume</a>
+		</div>
+		<div class="col-4"></div>
+	</div>
+</div>
     <!-- Information about me -->
-
+<div class="container skills mb-5">
+	<div class="row">
+		<div class="infoButtons col-12 text-center">
+			<button type="button" class="btn">Interests</button>
+			<button type="button" class="btn">Technical Skills</button>
+			<button type="button" class="btn">History</button>
+		</div>
+		<div class="col-2"></div>
+		<div class="infoText col-8 bg-secondary">
+		<p>This is placeholder text</p>
+		</div>
+		<div class="col-2"></div>
+	</div>
+</div>
     <!-- Previews of my work -->
-
+<div class="container previews mb-5">
+	<div class="row">
+		<div class="col-12 mx-auto text-center"><h2>Previews of what I can do</h2></div>
+		<div class="col-3 bg-success mx-auto text-center">School</div>		
+		<div class="col-3 bg-secondary mx-auto text-center">Business</div>
+		<div class="col-3 bg-primary mx-auto text-center">Gaming</div>
+	</div>
+</div>
     <!-- Projects I have worked on -->
   </body>
-  <footer>
-    
+  <footer class="bg-secondary">
+    <span>&copy; 2025 Dan Bahan</span>
   </footer>
 </html>
