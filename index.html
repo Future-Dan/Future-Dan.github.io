@@ -25,12 +25,11 @@
     <!-- My Intro -->
 	<div class="col-6"><h2 class="mx-auto text-center">Welcome!</h2></div>
 	<div class="col-6"></div>
-	<div class="container myIntro d-flex bg-secondary mb-5">
-		<div class="row justify-content-center">
-			<div class="myImage col-md-2">
-			<p>Placeholder</p>
+	<div class="container myIntro d-flex mb-5">
+		<div class="row bg-secondary justify-content-center">
+			<div class="myImage col-2">			
 			</div>
-			<div class="aboutMe col-md-6">
+			<div class="aboutMe col-6">
 			<p>My name is Dan Bahan, and welcome to my portfolio!<br>I am a web developer and
 			coder who loves to experiment and continuously expand my skills. I love web 
 			development because it is a perfect marriage between art and practicality, 
@@ -69,9 +68,18 @@
 <div class="container previews mb-5">
 	<div class="row">
 		<div class="col-12 mx-auto text-center"><h2>Previews of what I can do</h2></div>
-		<div class="col-3 bg-success mx-auto text-center">School</div>		
-		<div class="col-3 bg-secondary mx-auto text-center">Business</div>
-		<div class="col-3 bg-primary mx-auto text-center">Gaming</div>
+		<div class="card col-3 bg-success mx-auto text-center">
+			<h5 class="card header">School</h5>
+			<div id="school" class="card body"></div>
+		</div>		
+		<div class="card col-3 bg-secondary mx-auto text-center">
+			<h5 class="card header">Business</h5>
+			<div id="business" class="card body"></div>
+		</div>	
+		<div class="card col-3 bg-primary mx-auto text-center">
+			<h5 class="card header">Gaming</h5>
+			<div id="gaming" class="card body"></div>
+		</div>	
 	</div>
 </div>
     <!-- Projects I have worked on -->
