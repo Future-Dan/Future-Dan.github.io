@@ -1,0 +1,48 @@
+
+
+
+/* Navbar Customs*/
+
+/*My Intro Section*/
+.myImage {
+	background-image: URL("../images/myImage.png");
+	background-position: center;	
+	background-repeat: no-repeat;
+	background-size: 139px 139px;
+	min-width: 140px;
+	min-height: 140px;	
+}
+
+/*My Resume Section*/
+
+/*Information about me Section*/
+
+/*My Previews Section*/
+#school {
+	background-image: URL("../images/book.png");
+	background-position: bottom;	
+	background-repeat: no-repeat;
+	background-size: 150px 150px;
+	min-width: 150px;
+	min-height: 150px;
+}
+
+#business {
+	background-image: URL("../images/money.png");
+	background-position: bottom;	
+	background-repeat: no-repeat;
+	background-size: 150px 150px;
+	min-width: 150px;
+	min-height: 150px;
+}
+
+#gaming {
+	background-image: URL("../images/controller.png");
+	background-position: bottom;	
+	background-repeat: no-repeat;
+	background-size: 150px 150px;
+	min-width: 150px;
+	min-height: 150px;
+}
+
+/*My Projects Section*/
