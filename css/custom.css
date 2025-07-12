@@ -1,9 +1,37 @@
+:root {
+  --background-primary: #2a2828;
+  --text-primary: #049ea2;
+  --border-primary: #1486e3;
+  --border-secondary: #10e4e8;
+}
 
-
+body {
+	background-image: URL("../images/background.jpg");
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
 
 /* Navbar Customs*/
 
 /*My Intro Section*/
+.myIntro {
+	transition: 0.5s;
+	background: radial-gradient(circle,rgba(59, 57, 57, 0.8) 10%, rgba(89, 86, 86, 0.8) 85%, rgba(33, 32, 32, 0.8) 100%);
+	max-width: 850px;
+	min-width: 620px;
+	border: var(--border-primary) 2px solid;
+	border-radius: 5px;
+	}
+	
+.myIntro:hover,
+.myIntro:focus {
+	transform: scale(1.1);
+	background: radial-gradient(circle,rgba(59, 57, 57, 1) 10%, rgba(89, 86, 86, 1) 85%, rgba(33, 32, 32, 1) 100%);
+	border: var(--border-secondary) 2px solid;
+}
+	
+
 .myImage {
 	background-image: URL("../images/myImage.png");
 	background-position: center;	
@@ -16,6 +44,20 @@
 /*My Resume Section*/
 
 /*Information about me Section*/
+.btn {
+	background: var(--background-primary);	
+	color: var(--text-primary);
+}
+
+.btn:hover {
+	cursor: pointer;
+}
+
+.infoText {
+	transition: 0.5s;
+	background: rgba(20, 20, 20, 0.8);
+	min-height: 240px;
+}
 
 /*My Previews Section*/
 #school {

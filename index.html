@@ -26,15 +26,15 @@
 	<div class="col-6"><h2 class="mx-auto text-center">Welcome!</h2></div>
 	<div class="col-6"></div>
 	<div class="container myIntro d-flex mb-5">
-		<div class="row bg-secondary justify-content-center">
-			<div class="myImage col-2">			
+		<div class="row justify-content-center">
+			<div class="myImage col-xs-6 col-md-2">			
 			</div>
-			<div class="aboutMe col-6">
+			<div class="aboutMe col-6 text-white">
 			<p>My name is Dan Bahan, and welcome to my portfolio!<br>I am a web developer and
 			coder who loves to experiment and continuously expand my skills. I love web 
 			development because it is a perfect marriage between art and practicality, 
-			allowing me to explore my creativity while always providing more to learn and
-			experiment with. I would love an opportunity to make something for you too!</p>
+			allowing me to explore my creativity while always providing more to discover and
+			learn. I would love an opportunity to make something for you too!</p>
 			</div>
 		</div>
 	</div>
@@ -53,17 +53,58 @@
 <div class="container skills mb-5">
 	<div class="row">
 		<div class="infoButtons col-12 text-center">
-			<button type="button" class="btn">Interests</button>
-			<button type="button" class="btn">Technical Skills</button>
-			<button type="button" class="btn">History</button>
+			<button type="button" id="interests" class="btn">Interests</button>
+			<button type="button" id="technical" class="btn">Technical Skills</button>
+			<button type="button" id="history" class="btn">History</button>
 		</div>
 		<div class="col-2"></div>
-		<div class="infoText col-8 bg-secondary">
-		<p>This is placeholder text</p>
+		<div id="infoTextMe" class="infoText col-8 text-white">
+		<p>Select a field to learn more about me.</p>
 		</div>
 		<div class="col-2"></div>
 	</div>
 </div>
+<script>
+	const interests = document.getElementById("interests");
+	const technical = document.getElementById("technical");
+	const history = document.getElementById("history");
+	const infoText = document.getElementById("infoTextMe");
+	
+	interests.addEventListener("click", () => {
+		infoText.style.background = "rgba(0, 34, 75, 0.8)";
+		infoText.innerHTML = 
+		`<ul>
+			<li>I am a lead Administrator for an online gaming community of about 300 members, and I have a strong passion for online gaming</li>
+			<li>I'm a total buff for sci-fi and fantasy movies and games. I nerd for Star Trek, The Expanse, The Mandalorian. I live for Game of Thrones, and The Witcher, and Lord of the Rings was the best trilogy of all time.</li> 
+			<li>I enjoy problem-solving. I see every problem as a puzzle, and appreciate working towards an answer. The more I can challenge my mind, the better</li>
+			<li>I love to learn. I've dabbled in game design, 3D modeling, coding, astronomy, insurance, and my head is full of knowledge both useful and mundane</li>
+		</ul>`;		
+	});
+	
+	technical.addEventListener("click", () => {
+		infoText.style.background = "rgba(45, 14, 19, 0.8)";
+		infoText.innerHTML = 
+		`<ul>
+			<li>Coding: JavaScript, CSS, HTML, jQuery, PHP, MySQL, GitHub, AJAX</li>
+			<li>CRM Software: Zendesk, Helpshift, Zoom, Google Meet, Microsoft Teams</li> 
+			<li>Online Tools: Google Workspace (including administrating gmail groups), Microsoft Suite, Slack, Discord, IPB Forums</li>			
+		</ul>`;		
+	});
+	
+	history.addEventListener("click", () => {
+		infoText.style.background = "rgba(45, 102, 103, 0.8)";
+		infoText.innerHTML = 
+		`<ul>
+			<li>5 Years as the CS Department head for a Mobile Game Development company called LBC Studios</li>
+			<li>Over 10 years experience as a community leader for an online gaming community of 300+ people</li> 
+			<li>Graduated after 2 years in college for courses on Game Design and Basic Programming</li>
+			<li>1 year working as a licensed insurance agent, passing the provincial exams for both life insurance and insurance adjustment</li>
+		</ul>
+		
+		
+		See my resume for more details`;		
+	});
+</script>
     <!-- Previews of my work -->
 <div class="container previews mb-5">
 	<div class="row">
