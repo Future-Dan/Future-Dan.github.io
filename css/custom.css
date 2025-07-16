@@ -78,6 +78,11 @@ body {
 
 /*My Resume Section*/
 
+.resume {
+	max-width: 600px;	
+	border-radius: 20px;
+}
+
 /*Information about me Section*/
 .btnInfo {
 	background: var(--background-primary);	
@@ -100,7 +105,7 @@ body {
 }
 
 .card:hover {
-	cursor: pointer;
+	cursor: pointer;	
 }
 
 #school {
@@ -109,7 +114,12 @@ body {
 	background-repeat: no-repeat;
 	background-size: 150px 150px;
 	min-width: 150px;
-	min-height: 150px;
+	min-height: 150px;	
+}
+
+.schoolCard:hover,
+.schoolCard:focus {
+	box-shadow: 0 0 2px 4px var(--border-secondary);
 }
 
 #business {
@@ -121,6 +131,11 @@ body {
 	min-height: 150px;
 }
 
+.businessCard:hover,
+.businessCard:focus {
+	box-shadow: 0 0 2px 4px var(--border-secondary);
+}
+
 #gaming {
 	background-image: URL("../images/controller.png");
 	background-position: bottom;	
@@ -128,6 +143,11 @@ body {
 	background-size: 150px 150px;
 	min-width: 150px;
 	min-height: 150px;
+}
+
+.gamingCard:hover,
+.gamingCard:focus {
+	box-shadow: 0 0 2px 4px var(--border-secondary);
 }
 
 /*My Projects Section*/
