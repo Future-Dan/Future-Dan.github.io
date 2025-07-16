@@ -8,23 +8,33 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 	<?php $random = substr(hash('md5',openssl_random_pseudo_bytes(32)),0,7); ?>
 
-    <link rel="stylesheet" href="css/custom.css?cachebuster=<?= $random; ?>">
+    <link rel="stylesheet" href="css/custom.css?cachebuster=<?= $random; ?>">	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head> 
   <body>
     <!-- Navbar -->
 <nav class="navbar navbar-expand bg-dark mb-5">
-		<div class="container">        
+		<div class="container-fluid">        
           <div class="navbar-nav mx-auto ml-md-1">
-            <a class="nav-item nav-link" href="#aboutMe">About Me</a>
+            <a class="nav-item nav-link" href="#aboutMeID">About Me</a>
             <a class="nav-item nav-link" href="#resume">Resume</a>
-            <a class="nav-item nav-link" href="#skills">Skills and Interests</a>
-            <a class="nav-item nav-link" href="#previews">Previews</a>            
+            <a class="nav-item nav-link" href="#infoTextMe">Skills and Interests</a> 			
+			<div class="dropdown">
+				<button class="btn navbtn dropdown-toggle bg-dark">Previews</button>
+				<div class="dropdown-content">
+					<a class="dropdown-item navdrop" href="#">School</a>
+					<a class="dropdown-item navdrop" href="#">Business</a>
+					<a class="dropdown-item navdrop" href="#">Gaming</a>
+				</div>
+			</div>
           </div>
         </div>      
     </nav>
     <!-- My Intro -->
-	<div class="col-6"><h2 class="mx-auto text-center">Welcome!</h2></div>
-	<div class="col-6"></div>
+	<div id="aboutMeID" class="introContainer mx-auto text-center">
+		<h1 class="col-8">Dan Bahan</h1>		
+		<p class="col-10">Full-Stack Web Developer - Vancouver, British Columbia</p>		
+	</div>
 	<div class="container myIntro d-flex mb-5">
 		<div class="row justify-content-center">
 			<div class="myImage col-xs-6 col-md-2">			
@@ -53,9 +63,9 @@
 <div class="container skills mb-5">
 	<div class="row">
 		<div class="infoButtons col-12 text-center">
-			<button type="button" id="interests" class="btn">Interests</button>
-			<button type="button" id="technical" class="btn">Technical Skills</button>
-			<button type="button" id="history" class="btn">History</button>
+			<button type="button" id="interests" class="btn btnInfo">Interests</button>
+			<button type="button" id="technical" class="btn btnInfo">Technical Skills</button>
+			<button type="button" id="history" class="btn btnInfo">History</button>
 		</div>
 		<div class="col-2"></div>
 		<div id="infoTextMe" class="infoText col-8 text-white">
@@ -64,37 +74,37 @@
 		<div class="col-2"></div>
 	</div>
 </div>
-<script>
-	const interests = document.getElementById("interests");
-	const technical = document.getElementById("technical");
-	const history = document.getElementById("history");
-	const infoText = document.getElementById("infoTextMe");
-	
-	interests.addEventListener("click", () => {
-		infoText.style.background = "rgba(0, 34, 75, 0.8)";
-		infoText.innerHTML = 
-		`<ul>
+<script>	
+	$('#interests').click(function(){
+		$('#infoTextMe')
+		.css("background", "rgba(0, 34, 75, 0.8)")
+		.html(`
+		<ul>
 			<li>I am a lead Administrator for an online gaming community of about 300 members, and I have a strong passion for online gaming</li>
 			<li>I'm a total buff for sci-fi and fantasy movies and games. I nerd for Star Trek, The Expanse, The Mandalorian. I live for Game of Thrones, and The Witcher, and Lord of the Rings was the best trilogy of all time.</li> 
 			<li>I enjoy problem-solving. I see every problem as a puzzle, and appreciate working towards an answer. The more I can challenge my mind, the better</li>
 			<li>I love to learn. I've dabbled in game design, 3D modeling, coding, astronomy, insurance, and my head is full of knowledge both useful and mundane</li>
-		</ul>`;		
+		</ul>
+		`)		
 	});
 	
-	technical.addEventListener("click", () => {
-		infoText.style.background = "rgba(45, 14, 19, 0.8)";
-		infoText.innerHTML = 
-		`<ul>
+	$('#technical').click(function(){
+		$('#infoTextMe')
+		.css("background", "rgba(45, 14, 19, 0.8)")
+		.html(`
+		<ul>
 			<li>Coding: JavaScript, CSS, HTML, jQuery, PHP, MySQL, GitHub, AJAX</li>
 			<li>CRM Software: Zendesk, Helpshift, Zoom, Google Meet, Microsoft Teams</li> 
 			<li>Online Tools: Google Workspace (including administrating gmail groups), Microsoft Suite, Slack, Discord, IPB Forums</li>			
-		</ul>`;		
+		</ul>
+		`)		
 	});
 	
-	history.addEventListener("click", () => {
-		infoText.style.background = "rgba(45, 102, 103, 0.8)";
-		infoText.innerHTML = 
-		`<ul>
+	$('#history').click(function(){
+		$('#infoTextMe')
+		.css("background", "rgba(45, 102, 103, 0.8)")
+		.html(`
+		<ul>
 			<li>5 Years as the CS Department head for a Mobile Game Development company called LBC Studios</li>
 			<li>Over 10 years experience as a community leader for an online gaming community of 300+ people</li> 
 			<li>Graduated after 2 years in college for courses on Game Design and Basic Programming</li>
@@ -102,24 +112,25 @@
 		</ul>
 		
 		
-		See my resume for more details`;		
-	});
+		See my resume for more details
+		`)		
+	});	
 </script>
     <!-- Previews of my work -->
 <div class="container previews mb-5">
 	<div class="row">
 		<div class="col-12 mx-auto text-center"><h2>Previews of what I can do</h2></div>
 		<div class="card col-3 bg-success mx-auto text-center">
-			<h5 class="card header">School</h5>
-			<div id="school" class="card body"></div>
+			<h5 id="hschool" class="card header mt-1">School</h5>
+			<div id="school" class="card body bg-success"></div>
 		</div>		
 		<div class="card col-3 bg-secondary mx-auto text-center">
-			<h5 class="card header">Business</h5>
-			<div id="business" class="card body"></div>
+			<h5 id="hbusiness" class="card header mt-1">Business</h5>
+			<div id="business" class="card body bg-secondary"></div>
 		</div>	
 		<div class="card col-3 bg-primary mx-auto text-center">
-			<h5 class="card header">Gaming</h5>
-			<div id="gaming" class="card body"></div>
+			<h5 id="hgaming" class="card header mt-1">Gaming</h5>
+			<div id="gaming" class="card body  bg-primary"></div>
 		</div>	
 	</div>
 </div>
